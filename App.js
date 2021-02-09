@@ -1,18 +1,45 @@
 import React from "react";
 // 1. import `NativeBaseProvider` component
-import { NativeBaseProvider, Text, View } from "native-base";
-import { StatusBar } from "expo-status-bar";
+import { Container, Header, Content, Left, Body, Right, Text, Title, Footer, FooterTab, Button, Icon } from 'native-base';
 import { StyleSheet } from "react-native";
 
 export default function App() {
   // 2. Use at the root of your app
   return (
-    <NativeBaseProvider>
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <StatusBar style="auto" />
-      </View>
-    </NativeBaseProvider>
+    <Container>
+      <Header>
+        <Left/>
+        <Body>
+          <Title>VetLink</Title>
+        </Body>
+        <Right />
+      </Header>
+      <Content>
+        <Text>
+          This is Content Section
+        </Text>
+      </Content>
+      <Footer>
+        <FooterTab>
+          <Button vertical>
+            <Icon name="apps" />
+            <Text>Apps</Text>
+          </Button>
+          <Button vertical>
+            <Icon name="camera" />
+            <Text>Camera</Text>
+          </Button>
+          <Button vertical active>
+            <Icon active name="navigate" />
+            <Text>Navigate</Text>
+          </Button>
+          <Button vertical>
+            <Icon name="person" />
+            <Text>Contact</Text>
+          </Button>
+        </FooterTab>
+      </Footer>
+    </Container>
   );
 }
 
